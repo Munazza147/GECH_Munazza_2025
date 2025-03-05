@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <p>3 ways to decalre a function</p>
+    <p>1.function declaration</p>
+    <p>2. function expression</p>
+    <pre>
+        syntax:
+        const function_name=function(parameters){
+            //code
+        }
+        //call
+        function_name(arguments)
+    </pre>
+    <p>3.arrow function</p>
+    <pre>3.syntax:
+        const function_name= (para)=>{
+            //code
+        }
+        //call
+        function_name(argument)
+    </pre>
+
+    <p>1.syntax:
+    </p>
+    <pre>
+        function function_name (para){
+            //code
+        } 
+        call function
+        function_name()
+    </pre>
+    <h2>4 types of function</h2>
+    <p>1.function accepting a parameter and not returning a value</p>
+    <p>2..function accepting a parameter and returning a value</p>
+    <p>3..function not accepting a parameter and returning a value</p>
+    <p>4..function not accepting a parameter and not returning a value</p>
+    <script>
+        // //1.function declaration
+        // function display(){
+        //     console.log("this is display function");
+        // }
+        // //function call
+        // display();
+
+        //1.function declaration
+        function para_not_return(number){//paramerte
+            console.log(`the given number is ${number}`);
+        }
+        para_not_return(23); //argument
+
+        //2.
+        function para_return(number){
+            return number;
+        }
+        const res = para_return(335);
+        console.log(`the result is ${res}`);
+
+        //4.
+        function _not_para_not_returns()
+        {
+            console.log("this is 3rd type of function");
+        }
+        _not_para_not_returns()
+        //3.
+        function not_para_return()
+        {
+            return 345;
+        }
+       const res1 = not_para_return();
+       console.log(`the result is ${res1}`);
+
+
+
+       //task wheather is even or not
+       function even(number){
+        return  number % 2 == 0
+       }
+       const res2 = even(6);
+       if (res2 == true){
+        console.log("even number");
+       }
+       else{
+        console.log("odd number");
+       }
+
+
+       //2.function expression
+       const display1= function(){
+        console.log("this is display function expression");
+       }
+       display1();
+
+       
+       //3.function expression
+       const display2= () => {
+        console.log("this is display  arrow function");
+       }
+       display2();
+
+    </script>
+</body>
+</html>

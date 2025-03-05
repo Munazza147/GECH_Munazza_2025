@@ -1,0 +1,7 @@
+h1{
+    font-style: inherit;
+    border: 20px;
+    margin-top: yellow;
+    color: aqua;
+    font-display: var(20px);
+}

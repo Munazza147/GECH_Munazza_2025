@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refernce and primitive type</title>
+</head>
+<body>
+    <script>
+        //primitive means it will copys from the x what we given
+        let x=10;
+        let y=x
+        console.log("yhe value of x before is",x);//10 
+        console.log("yhe value of y before is",y);//10
+        x=100;
+        console.log("yhe value of x after is",x);//100
+        console.log("yhe value of y after is",y);//10
+
+
+        //refernce           //push means it will continue
+        let array1 = [12,13,14,15];
+        let array2 = array1;
+        console.log("yhe value of array1 before is",array1);
+        console.log("yhe value of array2 before is",array2);
+        array1.push(24);
+        console.log("yhe value of array1 after is",array1);
+        console.log("yhe value of array2 after is",array2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../day_6/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+        body{
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container1{
+            width: 100%;
+            max-width: 90%;
+            background-color: aliceblue;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        @media(min-width:567px){
+        .container1{
+            max-width:25rem
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="container1">
+    <h1>sign up</h1>
+    <p>please fill in this form to create an account</p>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        ><i class="fa-solid fa-user"></i
+      ></span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        ><i class="fa-solid fa-envelope"></i
+      ></span>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="email address"
+        aria-label="email address"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        ><i class="fa-solid fa-lock"></i
+      ></span>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="password"
+        aria-label="password"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"
+        ><i class="fa-solid fa-unlock-keyhole"></i
+      ></span>
+      <input
+        type="confirm password"
+        class="form-control"
+        placeholder="confirm password"
+        aria-label="confirm password"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="checkbox mb-3">
+        <input type="checkbox" name="" id=""> I accept the terms of use & privacy policy
+    </div>
+    <button type="button" class="btn btn-primary">sign up</button>
+    <script src="../day_6/js/bootstrap.bundle.min.js"></script>
+</div>
+</div>
+<p class="text-center" style="color: rgb(3, 16, 27);">already have an account|<a href="">login here</a></p>
+  </body>
+</html>

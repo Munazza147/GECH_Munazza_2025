@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string in js</title>
+</head>
+<body>
+    <script>
+    //    //1. Length
+    //     let str1 = "Hellow World"
+    //     const len = str1.length
+    //     console.log(`The length of the string ${str1} is : ,${len}`); //simple and easy avoid
+    //     //console.log("The length of the string " + str1 + " is : " + len); //+ is used for concatenation.  concatenating string with number will give result as string
+    //     console.log("The length of the string ", str1, " is : ", typeof len); // , will preserve the datatype i.e it result number as datatype
+
+    //     //2. slice
+    //     let str2 = "javascript"
+    //     let str3 = str2.slice(2, 7);
+    //     console.log(` The sliced string is : ${str3}`);
+    //     console.log(str2[5]);
+    //     console.log("the sliced string is ", str2.slice(-8, -2));
+
+    //     //3. substring
+    //     let str4 = "HelloJavaScript"
+    //     let str5 = str4.substring(2, 7); //last index is excluded
+    //     console.log(`The string is ${str5}`);
+    //     console.log(`The string is ${str5.substring(-13, -9)`});
+
+
+
+        //4.substr
+        let str6 = "hello world";
+        let str7= str6.substr(2,7);
+        console.log(`the string is ${str7}`);
+        
+        // let str8 = str6.substr(-8,7);
+        // console.log(`the string is ${str8}`);
+
+        //5.replace
+        let str8 = "java script";
+        let str9 = str8.replace("java","python");
+        console.log(`the string is ${str9}`);
+        
+        //6.upper case
+        let str10 = "munazza";
+        let str11 = str10.toUpperCase();
+        console.log(`the string is ${str11}`);
+
+        //7.lower case
+        let str12 = "MUNAZZA";
+        let str13 = str12.toLowerCase();
+        console.log(`the string is ${str13}`);
+
+
+        //8.trim  cutting of space
+        let str14 = "       hello    ";
+        let str15 = str14.trimLeft();
+        console.log(`the string is ${str15}`);
+
+
+        //9.indexOf  it will start with 0 1 2 3
+        let str16 = "hello javascript"
+        let index = str16.indexOf("hello");
+        console.log(`the index is ${index}`);
+
+
+        //10.startwith()    boolean type
+        let str17 = "hello java"
+        let res = str17.startsWith("hello")
+        console.log(`the index is ${res}`);
+
+         //10.endwith()   boolean type
+         let str18 = "hello java"
+        let result = str18.startsWith("hello")
+        console.log(`the index is ${result}`);
+
+        //11.includes()   boolean type
+        let str19 = "hello java and java script"
+        let re = str19.includes("hello")
+        console.log(`the index is ${re}`);
+
+        //12.concat  spacing matters
+        let str20 = "hello"
+        let str21 = str20.concat(" ","world");
+        console.log(`the result is ${str21}`);
+    </script>
+</body>
+</html>

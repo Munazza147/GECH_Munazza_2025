@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+        body{
+            padding: 20px;
+        }
+        .table_con{
+            padding: 10px;
+            text-align: center;
+        }
+        .table_con,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        tr:nth-child(2n){
+            background-color: blue;
+        }
+        tr:nth-child(2n+1){
+            background-color: aqua;
+        }
+        tr:first-child{
+            background-color: brown;
+            color: blueviolet;
+        }
+        th,td{
+            padding: 10px 5px;
+        }
+        tr{
+            text-align: start;  
+        }
+    </style>
+</head>
+<body>
+    <!-- table in image -->
+     <table>
+        <th>name</th>
+     <th>roll</th>
+     <th>age</th>
+     <tr>
+        <tr>
+            <td>pavan</td>
+            <td>45</td>
+            <td>14</td>
+        </tr>
+     </tr>
+
+
+     </table>
+    
+        <br>
+     <br>
+        <tr>
+        <th>name</th>
+     <td>usha</td>
+    </tr>
+        <tr>
+            <th>age</th>
+            <td>19</td>   
+        </tr>
+     
+     <br>
+     <br>
+     <table border="1">
+        <thead>
+            <tr>
+                <td>mon</td>
+                <td>tue</td>
+                <td>wed</td>
+                <td>thu</td>
+                <td>fri</td>
+                <td>sat</td>
+                <td>sun</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td colspan="2">2</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>6</td>
+        </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>7</td>
+    
+    </tr>
+</tbody>
+
+     </table>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .container{
+            width: 50vw;
+            height: 50vh;
+            border: 2px solid yellow;
+            display: flex;
+            justify-content: space-between;
+            align-items: last baseline;
+        }
+        .child{
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgb(37, 35, 185);
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello this is flex in css</h1>
+    <div class="container">
+        <div class="child first">1</div>
+        <div class="child sec">2</div>
+        <div class="child thir">3</div>
+        <div class="child four">4</div>
+        <div class="child five">5</div>
+    </div>
+</body>
+</html>

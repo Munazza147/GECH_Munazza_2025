@@ -1,0 +1,3 @@
+//# sourceMappingURL=init.js.map
+(function(){var c,b=["pl","en","ro","th","au"];try{var a=document.getElementById("i18nextTranslations");c=JSON.parse(a.textContent);null!==a.parentNode&&a.parentNode.removeChild(a)}catch(d){window.config&&"test"!==window.config.environment&&console.error("Error during translations parsing",d),c={}}i18next.init({load:b,whitelist:b,lng:config.language,fallbackLng:config.defaultLangaugeCode,interpolation:{prefix:"__",suffix:"__"}});b=Object.keys(c);for(a=0;a<b.length;a++)i18next.addResourceBundle(b[a],
+"translation",c[b[a]])})();window.i18n=i18next;

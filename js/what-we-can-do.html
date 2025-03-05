@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>1. we can change html content</h3>
+    <p id="demo">this is existing content</p>
+    <button
+      onclick="document.getElementById('demo').innerText='js will change html content'"
+    >
+      click me
+    </button>
+    <h3>2. we can chnage the attributes of html</h3>
+    <img src="./off blub.jpeg" alt="image" width="100px" height="100px" id="bulb_img">
+
+    <button type="button" onclick="document.getElementById('bulb_img').src='./on blub.jpeg'">turn on</button>
+    <button type="button" onclick="document.getElementById('bulb_img').src='./off blub.jpeg'">turn off</button>
+    <h3>3. we can change the css style</h3>
+    <p id="demo2">Lorem</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo2').style.color='red'"
+    >
+      click me
+    </button>
+
+    <h3>4.we can hide the html code</h3>
+    <p id="demo3">
+      Lorem ipsum.
+    </p>
+    <button type="button" onclick="document.getElementById('demo3').style.display='none'"
+    >hide</button>
+
+    <h3>5.we can shoe the html code</h3>
+    <p id="demo3">
+      Lorem ipsum.
+    </p>
+    <button type="button" onclick="document.getElementById('demo3').style.display='block'"
+    >show</button>
+
+  </body>
+</html>
