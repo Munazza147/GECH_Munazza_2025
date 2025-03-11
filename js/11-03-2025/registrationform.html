@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background-color: rgb(186, 205, 210);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-1 {
+            max-width: 90%;
+            width: 100%;
+            /* width: 25rem; */
+            background-color: white;
+            padding: 30px;
+        }
+
+
+        @media (min-width: 576px) {
+            .container-1 {
+                max-width: 25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-1">
+
+            <form id="registrationform" novalidate>
+                <h1>Sign Up</h1>
+                <div>Please fill in this form to create an account</div><br>
+
+                <div class="input-group mb-3">
+                    <span id="nameerror" class="col-12 text-danger "></span>
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input type="text" class="form-control" id="username" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1"><br>
+                </div>
+
+
+
+                <div class="input-group mb-3">
+                    <span id="emailerror" class="text-danger col-12"></span>
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <input type="email" class="form-control" id="email" placeholder=" Email Address" aria-label="Email"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span id="passworderror" class="text-danger col-12"></span>
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input type="password" class="form-control" id="password" placeholder="Password"
+                        aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span id="cpassworderror" class="text-danger col-12"></span>
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                    </span>
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password"
+                        aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <span id="addresserror" class="text-danger col-12"></span>
+                        <i class="fa-solid fa-location-dot"></i> </span>
+                    <textarea name="address" id="address" class="form-control" id="address" placeholder="address"
+                        aria-label="address" aria-describedby="basic-addon1"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <span id="pincodeError" class="text-danger col-12"></span>
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-map-pin"></i>
+                    </span>
+                    <input type="number" class="form-control" id="pincode" placeholder="Pincode" aria-label="Pincode"
+                        aria-describedby="basic-addon1">
+                </div>
+
+
+                <div class="form-check">
+                    <span id="checkerror" class="text-danger col-12"></span>
+
+
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="checkbox">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I accept the <a href="#" style="color: green; text-decoration: none;">Terms of Use</a> & <a
+                            href="#" style="color: green; text-decoration: none;">Privacy Policy</a>
+                    </label>
+                </div><br>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit" style="width: 130px; height: 40px;">Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <!-- <div class="">'Already have an account? <a href="#">Login here</a></div> -->
+            <p class="text-center" style="color: white;">'Already have an account? <a href="#"
+                    style="color: white;">Login
+                    here'</a></p>
+        </div>
+    </div>
+    </form>
+
+    <!-- <script src="./bootstrap.bundle.min.js"></script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const RegistrationForm = document.querySelector("#registrationform");
+            registrationform.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const showError = (eleId, text) => {
+                    document.getElementById(eleId).textContent = text;
+                }
+                const clearError = (eleId) => {
+                    document.getElementById(eleId).textContent = "";
+                }
+
+                const formvalid = () => {
+                    let isvalid = false;
+
+
+                    const name = document.querySelector("#username").value.trim();
+                    const email = document.querySelector("#email").value.trim();
+                    const password = document.querySelector("#password").value;
+                    const confirmpassword = document.querySelector("#confirmpassword").value;
+                    const address = document.querySelector("#address").textContent;
+                    const pincode = document.querySelector("#pincode").value.trim();
+                    console.log(name, email, password, confirmpassword, address, pincode);
+
+                    if (name === "") {
+                        showError("nameerror", "Name field is required")
+                        isvalid = false
+                    } else if (name.length < 3) {
+                        showError("nameerror", "Name should contain atleast 3 characters")
+                        isvalid = false
+                    } else {
+                        clearError("nameerror");
+                        isvalid = true
+                    }
+
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    console.log(email);
+                    if (email === "") {
+                        showError("emailerror", "email field is required")
+                        isvalid = false
+                    } else if (!emailPattern.test(email)) {
+                        showError("emailerror", "email is invalid")
+                        isvalid = false
+                    } else {
+                        clearError("emailerror");
+                        isvalid = true
+                    }
+
+                    const passworderror = /^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[@$%!?&])[A-Za-z\d@#$%^&*?!]{8,}$/;
+                    console.log(email);
+                    if (password === "") {
+                        showError("passworderror", "password field is required")
+                        isvalid = false
+                    } else if (!passworderror.test(password)) {
+                        showError("passworderror", "password should contain atleast one uppercase one lowecase one special character")
+                        isvalid = false
+                    } else {
+                        clearError("passworderror");
+                        isvalid = true
+                    }
+
+                    if (confirmpassword === "") {
+                        showError("cpassworderror", "password field is required")
+                        isvalid = false
+                    } else if (confirmpassword != password) {
+                        showError("cpassworderror", "password doesnot match, please Enter correct password")
+                        isvalid = false
+                    } else {
+                        clearError("cpassworderror");
+                        isvalid = true
+                    }
+
+                    if (address === " ") {
+                        showError("addresserror", "Address field is required")
+                        isvalid = false;
+                    } else {
+                        clearError("addresserror");
+                        isvalid = true;
+                    }
+
+                    const pincodeError = /^\d{6}$/;
+                    console.log(pincode);
+                    if (pincode === "") {
+                        showError("pincodeError", "pincode field is required")
+                        isvalid = false
+                    } else if (!pincodeError.test(pincode)) {
+                        showError("pincodeError", "PIN code should be of 6 digit")
+                        isvalid = false
+                    } else {
+                        clearError("pincodeError");
+                        isvalid = true
+                    }
+
+                    if (checkbox = " ") {
+                        showError("checkerror", "agree terms and condition")
+                        isvalid = false
+                    } else {
+                        clearError("checkerror");
+                        isvalid = true
+                    }
+                    return isvalid;
+
+                }
+                if (formvalid()) {
+                    alert("Form submitted successfully");
+                    registrationform.submit();
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

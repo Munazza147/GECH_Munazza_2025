@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone</title>
+</head>
+<body>
+    <h1>how to clone array</h1>
+    <p>1.spread operator(...)</p>
+    <p>2.slice(start,end)</p>
+    <p>3.concat</p>
+    <script>
+        //1.spread operator
+        const array1=[12,13,14,15,16];
+        // array1.push(23);
+        // console.log(array1);
+        // const array2=array1;
+        // console.log("array1",array1);//12,13,14,15,16,23
+        // console.log("array2",array2);//12,13,14,15,16,23
+
+        const array2=[...array1]; //it will only push to array1 operator because i given to ....arrray1
+        array1.push(23);
+        console.log("array1",array1); //12,13,14,15,16,23
+        console.log("array2",array2);//12,13,14,15,16
+
+        //2.slice 
+        const array3= ["item1","item2","item3"];
+        const array4=array3.slice(1);
+        array3.push("item4");
+        console.log("array3",array3); //item1,2,3,4
+        console.log("array4",array4); //item 1,2,3
+
+        //3.concat
+        const array5= ["item1","item2","item3"];
+        const array6 = [].concat(array5);
+        array5.push("item4");
+        console.log("array5",array5); //item1,2,3,4
+        console.log("array6",array6);//item 1,2,3
+    </script>
+</body>
+</html>

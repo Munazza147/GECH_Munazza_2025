@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array methods</h1>
+    <p>1.foreach</p>
+    <p>2.map</p>
+    <p>3.filter</p>
+    <p>4.reduce</p>
+    <p>5.sort</p>
+    <p>6.splice(start,delet,insert)</p>
+    <p>7.each</p>
+    <p>8.some</p>
+    <script>
+        const array1 = [1,2,3,4,5,6];
+        //1.foreach
+        array1.forEach((currentElement,index,array)=>{
+            console.log(currentElement*currentElement,"index is:",index, "array is:",array1);
+        });
+
+         const users = [
+         {firstname:"pavan", age:"23" , address:"hassan"},
+         {firstname:"pavan", age:"23" , address:"hassan"},
+        {firstname:"pavan", age:"23" , address:"hassan"},
+        ]
+        const user = users.forEach((currentElement)=>{
+            return currentElement.firstname
+         })
+         console.log(user);
+
+
+        //2.map
+        const array2= [1,3,4,5,6,7];
+        const array3=array2.map((curele,index,array)=>{
+            return curele*curele;
+        })
+        console.log("array2",array2);
+        console.log("array3",array3);
+
+        const user1=[
+            { firstname:"munazza",age:"23",address:"hassan"},
+            { firstname:"munazza",age:"23",address:"hassan"},
+            { firstname:"munazza",age:"23",address:"hassan"},
+        ]
+        const users2=user1.map((curele)=>{
+            return curele.firstname
+        })
+        console.log("users2:",users2);
+
+        //3.filter
+        const array4= [1,3,4,5,6,7,12,19,20,67];
+        const array5=array4.filter((curele)=>{
+            return curele %2 == 0;
+        })
+        console.log("array5",array5);
+        
+        //4.reduce                                              //previous     current     return
+        const array6=[1,2,3,4,5];
+        const res=array6.reduce((previous, current)=>{           //1             2           3
+            return previous+current;                              //3             3          6
+        },10);                                                  //6            4          10
+        console.log("the result is:",res);                             //10           5          15
+
+
+        //5.sort //in a correct form
+        let numbers = [5, 3, 8, 1, 2];
+        numbers.sort(); // Sorts as strings
+        console.log(numbers); // Output: [1, 2, 3, 5, 8]
+
+        //6.splice //adding
+        let fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
+        fruits.splice(1, 2, 'Orange', 'Grapes'); // Start at index 1, remove 2 items, add 'Orange' and 'Grapes'
+        console.log(fruits); // Output: ['Apple', 'Orange', 'Grapes', 'Date']
+
+        //7.forEach()
+        let numbers1 = [1, 2, 3, 4, 5];
+        numbers1.forEach((num) => {
+        console.log(num * 2); // Prints each number multiplied by 2
+        });
+            // Output:
+            // 2
+            // 4
+            // 6
+            // 8
+            // 10
+
+
+            //8.some()
+            let numbers6 = [1, 2, 3, 4, 5];
+            let hasEven = numbers6.some((num) => num % 2 === 0); // Check if there is at least one even number
+            console.log(hasEven); // Output: true
+
+    </script>
+</body>
+</html>

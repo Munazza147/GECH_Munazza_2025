@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <h1>object</h1>
+    <p>They can represent real-world entities, complex data structures, and more.,,,an object is a collection of properties</p>
+    <script>
+        const car_obj ={
+            carname:"tesla",
+            type:"EV",
+            wheels:"4",
+            "four seat":true,
+            speed : function(){
+                console.log("tesla is moving by 60km/h");
+            }
+
+        }
+        console.log(car_obj);
+        console.log(car_obj.carname);
+        console.log(car_obj.wheels);
+        car_obj.speed();
+        console.log(car_obj["four seat"]);
+
+        // how to add an object
+        car_obj.color = "red";
+        console.log("car object",car_obj);
+        const new_bnj={...car_obj}
+
+       // deleting item from object
+        delete new_bnj.color;
+        console.log("after car obj",new_bnj);
+    </script>
+</body>
+</html>

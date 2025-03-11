@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object destructing</h1>
+    <p>spread operator(...)</p>
+    <script>
+        const obj={
+            firstname:"kavana",
+            age:"21",
+            gender:"female",
+            address:"crp"
+
+        }
+        console.log(obj);
+        // const{ firstname,age,gender,address}=obj;
+        // console.log(firstname);
+        // console.log(age);
+        // console.log(gender);
+        // console.log(address);
+        const {firstname, ...rest} = obj;
+        console.log(firstname);
+        console.log(rest);
+    </script>
+</body>
+</html>

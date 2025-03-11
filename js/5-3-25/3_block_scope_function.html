@@ -10,16 +10,16 @@
     <p>2.function scope - function function_name{} (var)</p>
     <script>
         function scope(){
-            var num=10;
-            let num2=20;
+            var num=10; //it will same o/p overwrite
+            let num2=20; // first block mey jo o/p hai vahi then upar ke is mey hai o next cl mey atr
             if(true){
                 var num=100;
                 let num2=200;
-                console.log("var the number inside is:" +num);
-                console.log("let the number inside is:" +num2);
+                console.log("var the number inside is:" +num);//100
+                console.log("let the number inside is:" +num2);//200
             }
-            console.log("var the number inside is:" +num);
-            console.log("let the number inside is:" +num2);
+            console.log("var the number inside is:" +num);//100
+            console.log("let the number inside is:" +num2);//20
         }
         scope();
     </script>

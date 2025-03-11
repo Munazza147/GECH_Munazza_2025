@@ -1,0 +1,33 @@
+1_optional_changing.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional changing</title>
+</head>
+
+<body>
+    <h1>Optional Changing</h1>
+    <script>
+
+        const obj1 = {
+            firstname: "Habiba",
+            age: 21,
+            address: {
+                country: "India",
+                state: "karnataka",
+                city: "Hassan"
+            }
+        }
+
+        console.log(obj1);
+        console.log(obj1?.address?.country);//firt chech if the object is present, if yes it go for the address if address is there then it go for the country....if country is there then it reflect changes to to address then country name is displayed
+        console.log(obj1?.address1?.country);//trying to invoke undefined property.....here there is no property called address1 in the object so it return undefined
+        console.log(obj1?.address1.country);//gives error because it trying to invoke country from undefined property
+    </script>
+</body>
+
+</html>

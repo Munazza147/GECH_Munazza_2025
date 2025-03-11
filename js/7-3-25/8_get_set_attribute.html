@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>get and set attributes</h1>
+    <p>1.get attribute()</p>
+    <p>1.set attribute()</p>
+    <a href="./how_many_ways.html" class="atag" id="atag">how many ways</a>
+    <button onclick="handelChange()">change</button>
+    <script>
+        const atag=document.querySelector("#atag"); //it will change any file or set any file
+        console.log(atag.getAttribute("href"));
+
+        const handelChange= () => {
+            atag.setAttribute ("href","./1_optional_changing.html");
+            atag.innerText="optional changing";
+        }
+    </script>
+</body>
+</html>

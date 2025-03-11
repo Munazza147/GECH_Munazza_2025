@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+
+<body>
+    <h1>This Keyword</h1>
+    <p>It print the wiondow object, inside that it ahas document object ie print, alert etc followed by children</p>
+    <p>This keyword is mainly used in object</p>
+    <script>
+        //console.log(this);
+        function hello() {
+            console.log(this);
+        }
+        hello() //window object is calling this function
+
+        //const hello = () => {
+        //  console.log(this);
+        //}
+        //hello()
+
+        const obj1 = {
+            firstname: "Habiba",
+            lastname: "Farzana",
+            age: 22,
+            about: function () { //must use function expression rather than arrow function....because arrow function will give outpu directly as "window object", if we want to get higher object that is obj1 then we need to use function expression
+                console.log(this.firstname + " " + this.lastname);
+            }
+        }
+        obj1.about()
+
+    </script>
+</body>
+
+</html>

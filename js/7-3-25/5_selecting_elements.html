@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>selecting the html</h1>
+    <p id="first_p">1.using getElementById</p>
+    <p class="sec_P">2. using getElementsByClassName</p>
+    <p id="thir_P">3.using querySelector</p> 
+    <script>
+        //1.using getElementById
+       const first_p= document.getElementById("first_p");
+        first_p.style.color="red";
+
+
+        //2. using getElementsByClassName
+        const sec_P=document.getElementsByClassName("sec_P");
+        console.log(sec_P);
+        sec_P[0].style.color = "brown";
+
+        //3.using querySelector
+        //(.)class  (#)==id
+        // const thir_P=document.querySelector("#thir_P");
+        const thir_p=document.querySelector(".thir_P");
+        thir_P.style.color="blue";
+
+    </script>
+</body>
+</html>

@@ -9,6 +9,7 @@
     <p>3 ways to decalre a function</p>
     <p>1.function declaration</p>
     <p>2. function expression</p>
+    <p>arrow function</p>
     <pre>
         syntax:
         const function_name=function(parameters){
@@ -95,7 +96,23 @@
         console.log("this is display function expression");
        }
        display1();
+       //1.
+       const message=function(message){
+        console.log("i want a message from hostel students", message);
+       }
+       message("manage everything")
 
+       //2.
+       const add=function(a,b){
+           return a+b;
+       };
+       const res11=add(2,2);
+       console.log(res11);
+
+       //3.
+       const not_para_return1=function(not_para_return1){
+        
+       }
        
        //3.function expression
        const display2= () => {
